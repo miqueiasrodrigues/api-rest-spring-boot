@@ -1,9 +1,9 @@
 package com.miqueias.r.api_rest_spring_boot.controller.v1;
 
-import com.projetoSpring.springAPI.config.endpoint.v1.UserEndpointConfig;
-import com.projetoSpring.springAPI.data.vo.v1.UserVO;
-import com.projetoSpring.springAPI.service.v1.UserServices;
-import com.projetoSpring.springAPI.utils.Response;
+import com.miqueias.r.api_rest_spring_boot.endpoint.v1.UserEndpointConfig;
+import com.miqueias.r.api_rest_spring_boot.service.v1.UserServices;
+import com.miqueias.r.api_rest_spring_boot.utils.Response;
+import com.miqueias.r.api_rest_spring_boot.vo.v1.UserVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;

@@ -1,7 +1,7 @@
 package com.miqueias.r.api_rest_spring_boot.exception.handler;
 
-import com.projetoSpring.springAPI.exception.*;
-import com.projetoSpring.springAPI.utils.Response;
+import com.miqueias.r.api_rest_spring_boot.exception.*;
+import com.miqueias.r.api_rest_spring_boot.utils.Response;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;

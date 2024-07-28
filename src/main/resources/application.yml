@@ -1,0 +1,28 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/projeto_spring?useTimezone=true&serverTimezone=UTC
+    username: root
+    password: 2yk7
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: update
+        # properties:
+        # hibernate:
+      # dialect: org.hibernate.dialect.MySQLDialect
+    show-sql: false
+
+endpoint:
+  v1:
+    user:
+      access:
+        start:
+          date: 2024-07-01T00:00:00
+        limit:
+          date: 2024-07-28T00:00:00
+  v2:
+    user:
+      access:
+        start:
+          date: 2024-07-28T00:00:00

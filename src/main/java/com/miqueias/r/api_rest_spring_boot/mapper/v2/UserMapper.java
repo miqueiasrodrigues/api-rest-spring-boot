@@ -1,7 +1,7 @@
 package com.miqueias.r.api_rest_spring_boot.mapper.v2;
 
-import com.projetoSpring.springAPI.data.vo.v2.UserVO;
-import com.projetoSpring.springAPI.model.User;
+import com.miqueias.r.api_rest_spring_boot.model.User;
+import com.miqueias.r.api_rest_spring_boot.vo.v2.UserVO;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.factory.Mappers;

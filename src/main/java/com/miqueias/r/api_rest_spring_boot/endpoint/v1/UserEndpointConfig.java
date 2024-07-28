@@ -1,6 +1,6 @@
 package com.miqueias.r.api_rest_spring_boot.endpoint.v1;
 
-import com.projetoSpring.springAPI.exception.EndpointException;
+import com.miqueias.r.api_rest_spring_boot.exception.EndpointException;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Configuration;
 

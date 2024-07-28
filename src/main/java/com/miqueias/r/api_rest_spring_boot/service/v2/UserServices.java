@@ -1,13 +1,13 @@
 package com.miqueias.r.api_rest_spring_boot.service.v2;
 
-import com.projetoSpring.springAPI.data.vo.v2.UserVO;
-import com.projetoSpring.springAPI.exception.CpfAlreadyInUseException;
-import com.projetoSpring.springAPI.exception.CpfUpdateNotAllowedException;
-import com.projetoSpring.springAPI.exception.EmailAlreadyInUseException;
-import com.projetoSpring.springAPI.exception.ResourceNotFoundException;
-import com.projetoSpring.springAPI.mapper.v2.UserMapper;
-import com.projetoSpring.springAPI.model.User;
-import com.projetoSpring.springAPI.repository.UserRepository;
+import com.miqueias.r.api_rest_spring_boot.exception.CpfAlreadyInUseException;
+import com.miqueias.r.api_rest_spring_boot.exception.CpfUpdateNotAllowedException;
+import com.miqueias.r.api_rest_spring_boot.exception.EmailAlreadyInUseException;
+import com.miqueias.r.api_rest_spring_boot.exception.ResourceNotFoundException;
+import com.miqueias.r.api_rest_spring_boot.mapper.v2.UserMapper;
+import com.miqueias.r.api_rest_spring_boot.model.User;
+import com.miqueias.r.api_rest_spring_boot.repository.UserRepository;
+import com.miqueias.r.api_rest_spring_boot.vo.v2.UserVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
