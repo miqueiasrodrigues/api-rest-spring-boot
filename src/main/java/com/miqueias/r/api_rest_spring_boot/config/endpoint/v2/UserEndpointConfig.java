@@ -1,4 +1,4 @@
-package com.miqueias.r.api_rest_spring_boot.endpoint.v2;
+package com.miqueias.r.api_rest_spring_boot.config.endpoint.v2;
 
 
 import com.miqueias.r.api_rest_spring_boot.exception.EndpointException;
@@ -13,10 +13,10 @@ import java.time.temporal.ChronoUnit;
 @Configuration("UserEndpointConfigV2")
 public class UserEndpointConfig {
 
-    @Value("${endpoint.v2.user.access.start.date:#{null}}")
+    @Value("${web.endpoint.v2.user.access.start.date:#{null}}")
     private String startDate;
 
-    @Value("${endpoint.v2.user.access.limit.date:#{null}}")
+    @Value("${web.endpoint.v2.user.access.limit.date:#{null}}")
     private String limitDate;
 
     private LocalDateTime getStartDate() {
