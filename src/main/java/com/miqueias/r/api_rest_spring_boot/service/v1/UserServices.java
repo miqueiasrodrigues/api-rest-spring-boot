@@ -1,5 +1,6 @@
 package com.miqueias.r.api_rest_spring_boot.service.v1;
 
+import com.miqueias.r.api_rest_spring_boot.controller.v1.UserController;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.miqueias.r.api_rest_spring_boot.exception.CpfAlreadyInUseException;
@@ -13,6 +14,9 @@ import com.miqueias.r.api_rest_spring_boot.vo.v1.UserVO;
 import java.util.List;
 import java.util.Optional;
 import java.util.logging.Logger;
+import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.linkTo;
+import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
+
 
 @Service("UserServicesV1")
 public class UserServices {
@@ -26,7 +30,11 @@ public class UserServices {
     public List<UserVO> findAll() {
         logger.info("Fetching list of users");
         List<User> users = repository.findAll();
-        return userMapper.toUsersVO(users);
+        List<UserVO> usersVO = userMapper.toUsersVO(users);
+        for (UserVO userVO : usersVO) {
+            userVO.add(linkTo(methodOn(UserController.class).findById(userVO.getUserID())).withSelfRel());
+        }
+        return  usersVO;
     }
 
     public UserVO findById(Long id) {
@@ -36,7 +44,9 @@ public class UserServices {
                 () -> new ResourceNotFoundException("User not found!")
         );
 
-        return userMapper.toUserVO(user);
+        UserVO userVO = userMapper.toUserVO(user);
+        userVO.add(linkTo(methodOn(UserController.class).findById(id)).withSelfRel());
+        return userVO;
     }
 
     public UserVO create(UserVO userVO) {
@@ -54,7 +64,9 @@ public class UserServices {
 
         User createdUser = repository.save(userMapper.toUser(userVO));
 
-        return userMapper.toUserVO(createdUser);
+        UserVO createdUserVO = userMapper.toUserVO(createdUser);
+        userVO.add(linkTo(methodOn(UserController.class).findById(createdUser.getId())).withSelfRel());
+        return createdUserVO;
     }
 
     public UserVO update(UserVO userVO) {
@@ -85,7 +97,9 @@ public class UserServices {
 
         User updatedUser = repository.save(entity);
 
-        return userMapper.toUserVO(updatedUser);
+        UserVO updatedUserVO = userMapper.toUserVO(updatedUser);
+        userVO.add(linkTo(methodOn(UserController.class).findById(updatedUser.getId())).withSelfRel());
+        return updatedUserVO;
     }
 
     public void delete(Long id) {

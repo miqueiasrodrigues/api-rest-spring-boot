@@ -1,8 +1,14 @@
 package com.miqueias.r.api_rest_spring_boot.vo.v2;
 
+import java.io.Serializable;
 import java.util.Objects;
 
-public class UserVO {
+
+
+
+public class UserVO implements Serializable {
+
+    private static final long SerialVersionUID = 1L;
 
     private Long identificador;
     private String nome;

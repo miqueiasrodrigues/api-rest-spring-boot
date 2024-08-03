@@ -1,7 +1,7 @@
 package com.miqueias.r.api_rest_spring_boot.controller.v2;
 
 
-import com.miqueias.r.api_rest_spring_boot.endpoint.v2.UserEndpointConfig;
+import com.miqueias.r.api_rest_spring_boot.config.endpoint.v2.UserEndpointConfig;
 import com.miqueias.r.api_rest_spring_boot.service.v2.UserServices;
 import com.miqueias.r.api_rest_spring_boot.utils.Response;
 import com.miqueias.r.api_rest_spring_boot.vo.v2.UserVO;
@@ -16,7 +16,7 @@ import java.util.Date;
 import java.util.List;
 
 @RestController
-@RequestMapping("/v2/user")
+@RequestMapping("api/v2/user")
 @Controller("userControllerV2")
 public class UserController {
     @Autowired

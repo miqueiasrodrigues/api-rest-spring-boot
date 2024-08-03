@@ -1,9 +1,17 @@
 package com.miqueias.r.api_rest_spring_boot.vo.v1;
 
+import org.springframework.hateoas.RepresentationModel;
+
+import java.io.Serializable;
 import java.util.Objects;
 
-public class UserVO {
+//@JsonPropertyOrder({"userID", "userName", "userNickname", "userEmail", "userCPF", "userStreet",
+//"userState", "userZipCode", "userComplement"})
+public class UserVO extends RepresentationModel<UserVO> implements Serializable {
 
+    private static final long SerialVersionUID = 1L;
+//    @JsonProperty("userID")
+//    @JsonIgnore
     private Long userID;
     private String userName;
     private String userNickname;
