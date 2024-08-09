@@ -1,4 +1,4 @@
-package com.miqueias.r.api_rest_spring_boot.config.endpoint;
+package com.miqueias.r.api_rest_spring_boot.config;
 
 import com.miqueias.r.api_rest_spring_boot.serialization.converter.YamlJackson2HttpMesageConverter;
 import org.springframework.beans.factory.annotation.Value;

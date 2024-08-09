@@ -16,6 +16,13 @@ springdoc:
   swagger-ui:
     path: /api/swagger-ui
 
+
+security:
+  jwt:
+    token:
+      secret-key: 53cr37
+      expire-length: 3600000
+
 web:
   cors:
     originPatterns: http://miqueiasdev.com.br, https://miqueias.dev
