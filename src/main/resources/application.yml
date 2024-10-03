@@ -1,0 +1,41 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/projeto_spring?useTimezone=true&serverTimezone=UTC
+    username: root
+    password: 2yk7
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: none
+    show-sql: false
+
+springdoc:
+  api-docs:
+    path: /api/api-docs
+  swagger-ui:
+    path: /api/swagger-ui
+
+
+security:
+  jwt:
+    token:
+      secret-key: 53cr37
+      expire-length: 3600000
+
+web:
+  cors:
+    originPatterns: http://miqueiasdev.com.br, https://miqueias.dev
+  endpoint:
+    v1:
+      user:
+        access:
+          start:
+            date: 2024-07-01T00:00:00
+  #        limit:
+  #          date: 2024-08-02T00:00:00
+    v2:
+      user:
+        access:
+          start:
+            date: 2024-07-28T00:00:00
